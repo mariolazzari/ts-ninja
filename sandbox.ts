@@ -65,11 +65,26 @@ uid = 123;
 uid = "123";
 
 // objects
-
 let ninja1: object;
 ninja1 = { name: "Yoshi", age: 30 };
 
 let ninja2: { name: string; age: number };
-ninja2.age = 44;
-ninja2.name = "Mario";
+ninja2 = { name: "Mario", age: 44 };
 console.log(ninja1, ninja2);
+
+// any type
+let age3: any = 25;
+console.log(age3);
+age3 = true;
+console.log(age3);
+
+let mixed3: any[] = [];
+mixed3.push("Mario");
+mixed3.push(45);
+mixed3.push(true);
+console.log(mixed3);
+
+let ninjaAny: { name: any; age: any };
+ninjaAny = { name: "Test", age: true };
+
+console.log(ninjaAny);

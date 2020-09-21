@@ -48,7 +48,7 @@ ninja.age = 30;
 let character2: string;
 let age2: number;
 let loggedIn: boolean;
-console.log(character2, age2, loggedIn);
+//console.log(character2, age2, loggedIn);
 
 // typed arrays
 let ninjas: string[] = [];

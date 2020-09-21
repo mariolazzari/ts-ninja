@@ -1,3 +1,4 @@
+"use strict";
 var inputs = document.querySelectorAll("input");
 console.log(inputs);
 inputs.forEach(function (input) {
@@ -38,7 +39,7 @@ ninja.age = 30;
 var character2;
 var age2;
 var loggedIn;
-console.log(character2, age2, loggedIn);
+//console.log(character2, age2, loggedIn);
 // typed arrays
 var ninjas = [];
 ninjas.push("Mario");

@@ -88,3 +88,40 @@ let ninjaAny: { name: any; age: any };
 ninjaAny = { name: "Test", age: true };
 
 console.log(ninjaAny);
+
+// functions
+let great: Function;
+great = () => {
+  console.log("ciao ciao");
+};
+
+//great = 1
+
+const add = (a: number, b: number, c?: number | string): void => {
+  console.log(a + b);
+  console.log(c);
+};
+
+add(1, 2);
+//add(1,"a")
+add(1, 2, "a");
+
+const addDefault = (a: number, b: number, c: number | string = 10) => {
+  console.log(a + b);
+  console.log(c);
+};
+addDefault(10, 20, 30);
+
+const minus = (a: number, b: number): number => {
+  return a - b;
+};
+const diff = minus(10, 5);
+console.log(diff);
+
+// type aliases
+type StringOrNum = string | number;
+/*
+const add2 = (a: StringOrNum, b: StringOrNum): StringOrNum => {
+  return a + b;
+};
+*/

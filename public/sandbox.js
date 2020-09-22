@@ -70,3 +70,32 @@ console.log(mixed3);
 var ninjaAny;
 ninjaAny = { name: "Test", age: true };
 console.log(ninjaAny);
+// functions
+var great;
+great = function () {
+    console.log("ciao ciao");
+};
+//great = 1
+var add = function (a, b, c) {
+    console.log(a + b);
+    console.log(c);
+};
+add(1, 2);
+//add(1,"a")
+add(1, 2, "a");
+var addDefault = function (a, b, c) {
+    if (c === void 0) { c = 10; }
+    console.log(a + b);
+    console.log(c);
+};
+addDefault(10, 20, 30);
+var minus = function (a, b) {
+    return a - b;
+};
+var diff = minus(10, 5);
+console.log(diff);
+/*
+const add2 = (a: StringOrNum, b: StringOrNum): StringOrNum => {
+  return a + b;
+};
+*/

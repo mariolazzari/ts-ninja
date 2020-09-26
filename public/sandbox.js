@@ -94,8 +94,25 @@ var minus = function (a, b) {
 };
 var diff = minus(10, 5);
 console.log(diff);
-/*
-const add2 = (a: StringOrNum, b: StringOrNum): StringOrNum => {
-  return a + b;
+var logDetails = function (uid, item) {
+    console.log(item + " has uid " + uid);
 };
-*/
+var great2 = function (user) {
+    console.log(user.name + " says hello.");
+};
+// Function
+var greet;
+greet = function (name, greeting) {
+    console.log(name + " says " + greeting);
+};
+greet("Mario", "ciao");
+var calc;
+calc = function (num1, num2, action) {
+    if (action === "add") {
+        return num1 + num2;
+    }
+    else {
+        return num1 - num2;
+    }
+};
+calc(1, 2, "add");

@@ -120,8 +120,32 @@ console.log(diff);
 
 // type aliases
 type StringOrNum = string | number;
-/*
-const add2 = (a: StringOrNum, b: StringOrNum): StringOrNum => {
-  return a + b;
+type objWithName = { name: string; uid: StringOrNum };
+
+const logDetails = (uid: StringOrNum, item: string) => {
+  console.log(`${item} has uid ${uid}`);
 };
-*/
+
+const great2 = (user: objWithName) => {
+  console.log(`${user.name} says hello.`);
+};
+
+// Function
+let greet: (a: string, b: string) => void;
+greet = (name: string, greeting: string) => {
+  console.log(`${name} says ${greeting}`);
+};
+
+greet("Mario", "ciao");
+
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (num1: number, num2: number, action: string): number => {
+  if (action === "add") {
+    return num1 + num2;
+  } else {
+    return num1 - num2;
+  }
+};
+
+calc(1, 2, "add");

@@ -1,13 +1,21 @@
-"use strict";
+import { Invoice } from "./classes/Invoice";
+import { Payment } from "./classes/Payment";
 // grab form element
-var form = document.querySelector(".new-item-form");
+const form = document.querySelector(".new-item-form");
 // grab input fuelds
-var type = document.querySelector("#type");
-var tofrom = document.querySelector("#tofrom");
-var details = document.querySelector("#details");
-var amount = document.querySelector("#amount");
+const type = document.querySelector("#type");
+const tofrom = document.querySelector("#tofrom");
+const details = document.querySelector("#details");
+const amount = document.querySelector("#amount");
 // add events
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(type.value, amount.valueAsNumber);
+    let doc;
+    if (type.value === "Invoice") {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
+    console.log(doc);
 });
